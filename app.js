@@ -11,7 +11,6 @@ require('./passport/passport-setup');
 
 app.use('/uploads', express.static('uploads'));
 app.use(passport.initialize());
-
 app.use(cors());
 app.use(bodyparser.urlencoded({extended:true}))
 app.use(bodyparser.json());
@@ -31,6 +30,7 @@ const isLoggedIn=(req,res,next)=>{
 app.get('/',(req,res)=>{
     res.send("Home")
 });
+// Oauth Start 
 app.get('/failed',(req,res)=>{
   res.send("Failed to Login")
 });
@@ -57,7 +57,7 @@ app.get('/google/callback',
     req.logout();
     res.redirect('/');
   })
-
+// Oauth end
 const startApp = async () => {
     try {
       await connect(DB, {
