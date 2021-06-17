@@ -13,7 +13,6 @@ For Registarion:
 
 For login:
 
-Examples:
 -  HTTP POST Method (http://localhost:5000/api/users/login-user)
 
 
@@ -21,7 +20,9 @@ Examples:
 
 -  HTTP GET Method (http://localhost:5000/api/products/) 
 -  HTTP POST Method (http://localhost:5000/api/products/) 
-.
+-  For updating or removing product.
+     http://localhost:5000/api/products/:productID
+
 
 ## OAuth 
 For generation client id and secrete code visit following url.
