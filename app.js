@@ -36,6 +36,7 @@ app.get('/failed',(req,res)=>{
 });
 
 app.get('/success',isLoggedIn,(req,res)=>{
+  console.log(res);
   res.send(`Welcome ${req.user.displayName}!`)
 });
 
